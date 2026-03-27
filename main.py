@@ -490,33 +490,33 @@ def get_combined_action(row):
         # STRONG BUY: deep value, safe dividend, near 52w low, trend intact
         if (pd.notna(yield_z) and yield_z > 1.5 and
                 price_z < -1.0 and pct_low < 20 and not_broken):
-            action = '🔥 STRONG BUY - Deep Value Accumulation'
+            action = 'STRONG BUY - Deep Value Accumulation'
             signal_type = 'STRONG_BUY'
             strength = 90
 
         # BUY: attractive yield, near 52w low, trend intact
         elif (pd.notna(yield_z) and yield_z > 1.0 and
               pct_low < 30 and not_broken):
-            action = '🟢 BUY - Accumulate on Weakness'
+            action = 'BUY - Accumulate on Weakness'
             signal_type = 'BUY'
             strength = 70
 
         # CONTRARIAN: very cheap yield but trend broken
         elif (pd.notna(yield_z) and yield_z > 2.0 and
               not not_broken and pct_low < 40):
-            action = '⚖️ CONTRARIAN BUY - High Safety, Broken Trend'
+            action = 'CONTRARIAN BUY - High Safety, Broken Trend'
             signal_type = 'BUY_CONTRARIAN'
             strength = 65
 
         # OPPORTUNISTIC: growing dividend with attractive yield
         elif pd.notna(yield_z) and yield_z > 0.5:
-            action = '📈 OPPORTUNISTIC BUY - Growing Yield'
+            action = 'OPPORTUNISTIC BUY - Growing Yield'
             signal_type = 'BUY_OPPORTUNISTIC'
             strength = 60
 
         # TRIM: yield compressed, historically expensive
         elif pd.notna(yield_z) and yield_z < -1.5:
-            action = '✂️ TRIM - Yield Compressed, Historically Expensive'
+            action = 'TRIM - Yield Compressed, Historically Expensive'
             signal_type = 'TRIM'
             strength = 35
 
