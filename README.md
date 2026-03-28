@@ -11,7 +11,6 @@ This engine performs fundamental and technical analysis on dividend-paying stock
 ### Fundamental Analysis
 - **REIT/Trust-Aware Metrics**: Automatically uses Funds From Operations (FFO) or Operating Cash Flow (OCF) for REITs and asset-heavy entities; defaults to EPS for regular corporations
 - **Payout Sustainability**: Calculates payout ratios with appropriate per-share metrics and flags unsustainable distributions
-- **Industry Classification**: Auto-detects REITs and asset-heavy sectors (infrastructure, utilities, telecom, transport) from industry descriptions and company names
 
 ### Technical Analysis
 - **Yield Z-Score**: Blended 5-year and 10-year mean-reversion signal for identifying historically attractive yields
@@ -20,7 +19,6 @@ This engine performs fundamental and technical analysis on dividend-paying stock
 
 ### Risk Detection
 - **Dividend Trap Identification**: Flags stocks with unsustainable payouts (>100% of FFO/OCF for REITs, >90% for regular companies) combined with dividend cuts
-- **Special Dividend Filtering**: Identifies and excludes one-time special dividends from yield calculations
 - **Drawdown Analysis**: Tracks 1-year maximum drawdown to assess recovery potential
 - **52-Week High/Low Proximity**: Measures relative price position for mean reversion signals
 
